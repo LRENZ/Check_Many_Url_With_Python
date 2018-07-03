@@ -70,16 +70,7 @@ def getcsv():
     df1.to_csv('urlcheck.csv')
     return df1.shape
 
-def sendmail(email,dim):
-    yag = yagmail.SMTP('lrenz1116@gmail.com')
-    csv_file_names = [x for x in os.listdir(".") if x.endswith(".csv")]
-    if len(csv_file_names) >0 :
-        contents = "<h1>Url check has finished </h1> Please find files attached,dimension is {}".format(str(dim))
-        yag.send(email, "urlcheck notication", contents, attachments=csv_file_names)
-    else:
-        contents = "<h1>send fail, please check out</h1> "
-        yag.send(email, "urlcheck notication", contents)
-    print('finish')
+
 	
 def convert(url):
     if url.startswith('https://www.'):
@@ -109,7 +100,7 @@ def deleted(dele):
 
 
 def run():
-    email = ['garry.lau@qpidnetwork.com']
+    
     urllist = geturllist()
     pool = mp.Pool(processes=8)
     p = pool.map(savestatus,urllist)
@@ -122,7 +113,7 @@ def run():
 if __name__ == '__main__':
     deleted()
 
-    #sendmail(email,shape)
+    
 
 
 

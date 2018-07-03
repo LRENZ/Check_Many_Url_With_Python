@@ -2,7 +2,6 @@ import requests
 from mongoengine import *
 import pandas as pd
 import os
-import  click
 import yagmail
 import multiprocessing as mp
 

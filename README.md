@@ -1,7 +1,7 @@
 # Check_Many_Url_With_Python<br>
 Check Many Url With Requests &amp; Output A Result file<br>
 Firstly, You Need install mongodb , Cause We Use Mongodb to save all requestsd url & its result<br>
-## Uasge: Paste All Url you want to test into<br>
+## Uasge: Paste All Url you want to test into(one URL one Line)<br>
      remove.txt    
 <br>
 and run the script with <br>
